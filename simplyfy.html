@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AISimplify</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f7fa;
+      color: #333;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1e2a38;
+      padding: 1rem 2rem;
+      color: white;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    .logo .ai {
+      color: #00bfa5;
+      font-size: 2.2rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background-color: #00bfa5;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 2rem;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+      background-color: #eaf4f2;
+      margin-bottom: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #1e2a38;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: #555;
+    }
+
+    .cta-button {
+      background-color: #00bfa5;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      display: inline-block;
+      transition: background-color 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: #00a08a;
+    }
+
+    .home-content,
+    .tab-content h2 {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .tab-content p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .solutions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .solution-card {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .solution-card h3 {
+      color: #1e2a38;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-form {
+      max-width: 600px;
+      margin: 2rem auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact-form label {
+      font-weight: bold;
+      color: #1e2a38;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 0.75rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #1e2a38;
+      color: white;
+      margin-top: 2rem;
+    }
+
+    .tab-content ul {
+      max-width: 600px;
+      margin: 1rem auto;
+      text-align: left;
+    }
+
+    .tab-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <span class="ai">AI</span>Simplify
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#" data-tab="home" class="nav-link active">Home</a></li>
+        <li><a href="#" data-tab="about" class="nav-link">About</a></li>
+        <li><a href="#" data-tab="solutions" class="nav-link">Solutions</a></li>
+        <li><a href="#" data-tab="contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="tab-content active">
+      <section class="hero">
+        <h1>Turning Complexity into Clarity</h1>
+        <p>We help businesses automate tasks and optimize workflows with intelligent solutions.</p>
+        <a href="#" class="cta-button">Get Started</a>
+      </section>
+      <section class="home-content">
+        <h2>Welcome to AISimplify</h2>
+        <p>This is dummy text for the home page. You can replace this with your actual content, such as featured services, testimonials, or a brief overview of your offerings.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </section>
+    </section>
+
+    <section id="about" class="tab-content">
+      <h2>About Us</h2>
+      <p>This is dummy text for the about page. Replace this with your company story, mission, and team information.</p>
+      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <ul>
+        <li>Our mission: Simplify AI for everyone.</li>
+        <li>Founded in 2025.</li>
+        <li>Team of 20+ experts.</li>
+      </ul>
+    </section>
+
+    <section id="solutions" class="tab-content">
+      <h2>Our Solutions</h2>
+      <p>This is dummy text for the solutions page. Fill this in with details about your products, services, or case studies.</p>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+      <div class="solutions-grid">
+        <div class="solution-card">
+          <h3>Automation Tools</h3>
+          <p>Streamline your operations.</p>
+        </div>
+        <div class="solution-card">
+          <h3>Workflow Optimization</h3>
+          <p>Boost efficiency with AI.</p>
+        </div>
+        <div class="solution-card">
+          <h3>Custom Integrations</h3>
+          <p>Tailored to your needs.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="tab-content">
+      <h2>Contact Us</h2>
+      <p>This is dummy text for the contact page. Add your contact form, email, phone, and address here.</p>
+      <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+      <form class="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit" class="cta-button">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 AISimplify. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const navLinks = document.querySelectorAll('.nav-link');
+      const tabContents = document.querySelectorAll('.tab-content');
+
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          // Remove active class from all links and contents
+          navLinks.forEach(l => l.classList.remove('active'));
+          tabContents.forEach(c => c.classList.remove('active'));
+          
+          // Add active class to clicked link
+          this.classList.add('active');
+          
+          // Show corresponding tab content
+          const targetTab = this.getAttribute('data-tab');
+          const targetContent = document.getElementById(targetTab);
+          if (targetContent) {
+            targetContent.classList.add('active');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
