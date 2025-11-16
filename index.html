@@ -6,8 +6,8 @@
   <title>AISimplify</title>
   <style>
     body {
+      font-family: Arial, sans-serif;
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f4f7fa;
       color: #333;
     }
@@ -172,6 +172,32 @@
       margin-bottom: 0.5rem;
       line-height: 1.6;
     }
+
+    /* Responsive Styling */
+    @media only screen and (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 1rem;
+      }
+
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .solution-card {
+        padding: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -203,19 +229,19 @@
 
     <section id="about" class="tab-content">
       <h2>About Us</h2>
-      <p>The company was founded in early 2025 with the mission to simplify complexity for our clients by delivering smart, scalable AI-powered solutions that transform how they work. Our leadership and engineering teams bring decades of experience working with organizations worldwide. </p>
+      <p>The company was founded in early 2025 with the mission to simplify complexity for our clients by delivering smart, scalable AI-powered solutions that transform how they work.</p>
       <ul>
-        <li>Simplicity - We believe in making the complex feel effortless—designing intuitive solutions that streamline operations and reduce friction.</li>
-        <li>Client Centricity - We prioritize understanding our clients’ unique challenges and goals, delivering solutions that truly fit their needs.</li>
-        <li>Innovation - We embrace emerging technologies and creative thinking to build smarter, more efficient systems.</li>
-        <li>Collaboration - We believe the best outcomes come from working closely with our clients and fostering strong partnerships. </li>
-        <li>Excellence - We are committed to delivering high-quality solutions that exceed expectations and drive measurable impact. </li>
+        <li>Simplicity – intuitive solutions that streamline operations.</li>
+        <li>Client Centricity – solutions tailored to client needs.</li>
+        <li>Innovation – emerging technologies and creative thinking.</li>
+        <li>Collaboration – strong partnerships with clients.</li>
+        <li>Excellence – high-quality solutions with measurable impact.</li>
       </ul>
     </section>
 
     <section id="solutions" class="tab-content">
       <h2>Our Solutions</h2>
-      <p>The team at AISimplify have proven experience reducing customer effort from hours to seconds with AI driven solutions.</p>
+      <p>We reduce customer effort from hours to seconds with AI-driven solutions.</p>
       <div class="solutions-grid">
         <div class="solution-card">
           <h3>Automation</h3>
@@ -223,16 +249,16 @@
         </div>
         <div class="solution-card">
           <h3>In-House AI Laboratory</h3>
-          <p>Leverage our private, secure and customizable environment.</p>
+          <p>Private, secure, customizable environment.</p>
         </div>
         <div class="solution-card">
           <h3>Personalized</h3>
-          <p>AI Solutions tailored to your needs.</p>
+          <p>AI solutions tailored to your needs.</p>
         </div>
       </div>
     </section>
 
-   <section id="contact" class="tab-content">
+    <section id="contact" class="tab-content">
       <h2>Contact Us</h2>
       <p>Please email our team to schedule a free consultation or for additional information.</p>
       <p><a href="mailto:contact@aisimplifysolutions.com">contact@aisimplifysolutions.com</a></p>
@@ -244,22 +270,16 @@
   </footer>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       const navLinks = document.querySelectorAll('.nav-link');
       const tabContents = document.querySelectorAll('.tab-content');
 
       navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
+        link.addEventListener('click', function (e) {
           e.preventDefault();
-          
-          // Remove active class from all links and contents
           navLinks.forEach(l => l.classList.remove('active'));
           tabContents.forEach(c => c.classList.remove('active'));
-          
-          // Add active class to clicked link
           this.classList.add('active');
-          
-          // Show corresponding tab content
           const targetTab = this.getAttribute('data-tab');
           const targetContent = document.getElementById(targetTab);
           if (targetContent) {
